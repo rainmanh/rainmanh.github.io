@@ -1,0 +1,57 @@
+{{- if .Values.ingress.enabled -}}
+--- 
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-jenkins
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: default-http-backend
+    servicePort: 80
+  rules:
+  - host: {{ .Values.ingress.jenkinshostname }}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ include "k8s-jenkins-minikube.fullname" . }}
+          servicePort: {{ .Values.service.port }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "k8s-jenkins-minikube.fullname" . }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.ingress.port }}
+      targetPort: {{ .Values.ingress.port }}
+      protocol: {{ .Values.ingress.protocol }}
+      name: http
+#    - port: 50000
+#      targetPort: 50000
+#      name: jnlp
+  selector:
+    app: {{ include "k8s-jenkins-minikube.fullname" . }}
+{{- else }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "k8s-jenkins-minikube.fullname" . }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: {{ .Values.service.protocol }}
+      name: http
+#    - port: 50000
+#      targetPort: 50000
+#      name: jnlp
+  selector:
+    app: {{ include "k8s-jenkins-minikube.fullname" . }}
+{{- end }}
+  

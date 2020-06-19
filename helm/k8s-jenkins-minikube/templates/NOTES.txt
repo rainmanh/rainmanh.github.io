@@ -1,0 +1,16 @@
+1. Get the application URL by running these commands:
+{{- if .Values.ingress.enabled -}}
+Deployed Ingress Mode
+export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} -o jsonpath="{.items[0].status.addresses[0].address}")
+export JENKINS_MASTER="{{ .Values.ingress.jenkinshostname }}"
+echo http://$JENKINS_MASTER:80
+echo "Don't forget to update your /etc/hosts with the following:"
+echo "NODE_IP http://$JENKINS_MASTER:80"
+{{- else }}
+Deployed NodePort mode
+export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} -o jsonpath="{.spec.ports[0].nodePort}" services {{ include "k8s-jenkins-minikube.fullname" . }})
+export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} -o jsonpath="{.items[0].status.addresses[0].address}")
+export JENKINS_MASTER=$(kubectl get pods|grep jenkins|cut -d' ' -f1)
+export JENKINS_MASTER_IP=$(kubectl get pods $JENKINS_MASTER -o jsonpath="{.status.podIP}")
+echo http://$NODE_IP:$NODE_PORT
+{{- end }}
