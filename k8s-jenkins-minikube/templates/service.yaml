@@ -1,24 +1,24 @@
 {{- if .Values.ingress.enabled -}}
 --- 
 #apiVersion: extensions/v1beta1
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-jenkins
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  backend:
-    serviceName: default-http-backend
-    servicePort: 80
   rules:
   - host: {{ .Values.ingress.jenkinshostname }}
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: {{ include "k8s-jenkins-minikube.fullname" . }}
-          servicePort: {{ .Values.service.port }}
+          service:
+            name: {{ include "k8s-jenkins-minikube.fullname" . }}
+            port: 
+              number: {{ .Values.service.port }}
 ---
 apiVersion: v1
 kind: Service

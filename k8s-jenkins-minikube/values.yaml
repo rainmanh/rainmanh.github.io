@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: my-jenkins-image
+  repository: jenkins/jenkins
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0"
+  tag: "lts"
 
 nameOverride: "jenkins"
 fullnameOverride: "jenkins"
