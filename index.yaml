@@ -9,7 +9,7 @@ entries:
     name: k8s-jenkins-minikube
     type: application
     urls:
-    - https://your-github-username.github.io/rainmanh.github.io/k8s-jenkins-minikube-0.1.2.tgz
+    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.2
@@ -19,7 +19,7 @@ entries:
     name: k8s-jenkins-minikube
     type: application
     urls:
-    - https://your-github-username.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.2.tgz
+    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.0
@@ -29,7 +29,7 @@ entries:
     name: k8s-jenkins-minikube
     type: application
     urls:
-    - https://your-github-username.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.1.tgz
+    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
@@ -39,6 +39,6 @@ entries:
     name: k8s-jenkins-minikube
     type: application
     urls:
-    - https://your-github-username.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.0.tgz
+    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.0.tgz
     version: 0.1.0
 generated: "2025-05-05T22:10:39.804314+01:00"
