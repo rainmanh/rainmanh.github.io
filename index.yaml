@@ -3,42 +3,32 @@ entries:
   k8s-jenkins-minikube:
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2025-05-05T22:10:39.806322+01:00"
-    description: Kubernetes Jenkins master/slave setup
-    digest: 900ae2af310c2becebcc2b3f9b0e14d349357db78c6412f03924897cc9ce7614
-    name: k8s-jenkins-minikube
-    type: application
-    urls:
-    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v2
-    appVersion: 0.1.2
-    created: "2025-05-05T22:10:39.808211+01:00"
+    created: "2025-05-05T22:24:24.193372+01:00"
     description: Kubernetes Jenkins master/slave setup
     digest: e84943052acfa987b78860f06a36a30f77bf6f19efa73bbe1da6f1608ff99a97
     name: k8s-jenkins-minikube
     type: application
     urls:
-    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.2.tgz
+    - https://rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-05-05T22:10:39.807688+01:00"
+    created: "2025-05-05T22:24:24.192569+01:00"
     description: Kubernetes Jenkins master/slave setup
     digest: 3bd2b9b92f6077936c0c49e9cbcdc001a20ab3f916e51060ff4bc3ee76ea24e1
     name: k8s-jenkins-minikube
     type: application
     urls:
-    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.1.tgz
+    - https://rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-05-05T22:10:39.806991+01:00"
+    created: "2025-05-05T22:24:24.191827+01:00"
     description: Kubernetes Jenkins master/slave setup
     digest: 2ca9f15dbc3eb03de23ea85bdd95a405b856e78c9735b99c0d1f82e6d3ee56b0
     name: k8s-jenkins-minikube
     type: application
     urls:
-    - https://rainmanh.github.io/rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.0.tgz
+    - https://rainmanh.github.io/k8s-jenkins-minikube/k8s-jenkins-minikube-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-05T22:10:39.804314+01:00"
+generated: "2025-05-05T22:24:24.189976+01:00"
